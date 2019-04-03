@@ -1,3 +1,5 @@
+#Description: test
+
 hmodMenu(){
 
   echo -e "1 - exit\n2 - change owner\n3 - change rights\n4 - see edit"

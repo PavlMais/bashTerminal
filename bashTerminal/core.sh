@@ -5,6 +5,8 @@ if [ ! -d modules/ ]; then
 fi
 
 if [ ! -f modules/help.sh ]; then
+  
+  echo "Modules not exist, please add modules on 'modulse/' directory"
   touch modules/help.sh
 fi
 
@@ -12,15 +14,15 @@ fi
 
 
 
-  echo "Modules not exist, please add modules on 'modulse/' directory"
 files=(modules/*)
 allApps=0
 
 for n in "${files[@]}" 
 do
   echo "$(($allApps + 1)) > $n " 
-  cat $n | grep Description
-  echo ""  
+  echo "    $(cat $n | grep Description)"
+ 
+
   allApps=$(( $allApps + 1 )) 
 done 
 
