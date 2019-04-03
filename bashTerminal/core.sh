@@ -29,9 +29,11 @@ while true; do
   read -p "Choise: " sel
 
   sel=$(($sel - 1))
-  echo $sel
-  echo ${files[$sel]}
-  
+  if (( $sel == -1 ))
+  then
+    echo "Exit.."
+    break
+  fi
   if (( $sel<0 || $sel>=$allApps))
   then 
     
